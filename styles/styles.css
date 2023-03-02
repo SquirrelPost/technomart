@@ -46,13 +46,16 @@
   --basic-green-active: #518534;
   --basic-grey: #3d546f;
   --basic-greylight: #c5c5c5;
-  --basic-background: #f1f5f7;
+  --basic-background: #f3f7f9;
+  --extra-background: #f4f7f9;
   --white: #ffffff;
   --special-yellow: #ffbf47;
   --special-blue: #3bbce3;
   --special-lilac: #dc91d8;
   --special-greenlight: #8ed78f;
   --special-yellowlight: #ffd180;
+  --special-grey: #32425c;
+  --special-black: #293449;
   --status-error: #ff0000;
   --status-warning: #ffff00;
   --status-success: #00ff00;
@@ -159,7 +162,6 @@ img {
   line-height: 18px;
 }
 
-
 /* Buttons */
 .button {
   display: inline-block;
@@ -185,11 +187,45 @@ img {
 
 
 /* Header */
-.main-description {
-  font-family: "PT Sans", "Arial", sans-serif;
+
+
+.header-info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 13px 3px 13px 2px;
+  background-color: var(--basic-background);
+}
+
+.header-info-title {
   font-style: italic;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-red);
+  margin: 0;
+  margin-right: auto;
+}
+
+.header-info-address-text {
+  margin: 0;
+  color: var(--special-grey);
+  margin-right: 31px;
+}
+
+.header-info-tel-block {
+  display: flex;
+}
+
+.header-info-tel-icon {
+  color: var(--special-black);
+  margin-right: 8px;
+}
+
+.header-info-address-phone {
+  display: flex;
+  color: var(--special-black);
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
