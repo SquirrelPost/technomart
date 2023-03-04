@@ -180,7 +180,7 @@ img {
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 13px 6px;
+  padding: 13px 6px 14px 5px;
   border: none;
   border-radius: 2px;
   text-decoration: none;
@@ -189,8 +189,117 @@ img {
   outline-offset: 0;
 }
 
+.button:hover {
+  background-color: var(--basic-red-hover);
+}
 
+.button:active {
+  background-color: var(--basic-red-active);
+}
 
+.button:focus {
+  outline: 2px solid var(--basic-black);
+}
+
+.button:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.icon-button {
+  padding: 11px 26px 11px 22px;
+  background-color: var(--basic-green);
+  display: flex;
+  position: relative;
+}
+
+.icon-button:hover {
+  background-color: var(--basic-green-hover);
+}
+
+.icon-button:active {
+  background-color: var(--basic-green-active);
+}
+
+.icon-button::before {
+  content: "";
+  position: relative;
+  top: 50%;
+  transform: translateX(-50%);
+  left: 0;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.stroke-button {
+  background-color: transparent;
+  border: 2px solid var(--basic-green);
+  color: var(--special-grey);
+  padding: 10px 6px 9px 5px;
+  outline-offset: 2px;
+}
+
+.stroke-button:hover {
+  background-color: transparent;
+  border-color: var(--basic-grey);
+}
+
+.stroke-button:active {
+  background-color: transparent;
+  color: var(--basic-greylight);
+  border-color: var(--basic-greylight);
+}
+
+.sticker-button {
+  margin: 100px;
+  padding: 11px 29px 11px 29px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.sticker-button::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 30px;
+  height: 30px;
+  background-color: var(--basic-red);
+  border-radius: 4px;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.sticker-button:hover::after {
+  background-color: var(--basic-red-hover);
+}
+
+.sticker-button:active::after {
+  background-color: var(--basic-red-active);
+}
+
+.sticker-button:focus {
+  outline: none;
+}
+
+.sticker-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 142px;
+  height: 40px;
+  border: 2px solid var(--basic-black);
+  border-radius: 4px;
+  display: none;
+}
+
+.sticker-button:focus::before {
+  display: block;
+}
 
 /* Field */
 .field {
@@ -285,7 +394,7 @@ img {
 .header-info-address-text {
   margin: 0;
   color: var(--special-grey);
-  margin-right: 31px;
+  margin-right: 34px;
 }
 
 .header-info-tel-block {
@@ -367,7 +476,7 @@ img {
 .header-search-icon {
   color: var(--basic-white);
   opacity: 0.3;
-  margin-right: 12px;
+  margin-right: 4px;
   margin-left: 21px;
 }
 
@@ -479,7 +588,7 @@ img {
 
 /* Popover-auth */
 .popover {
-  display: block;
+  display: none;
   z-index: 1;
   position: absolute;
   top: 0;
@@ -508,13 +617,13 @@ img {
 
 .popover-title {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 36px;
   max-width: 276px;
 }
 
 .popover-auth .popover-title {
   margin-left: 5px;
-  margin-bottom: 43px;
+  margin-bottom: 48px;
 }
 
 .popover-close-button {
@@ -548,22 +657,187 @@ img {
   outline: 2px solid var(--basic-green);
 }
 
-
-
-
-
-
-.popover-entered .popover-content {
-  padding: 22px 29px 33px 31px;
+.field-group-auth {
+  margin: 0;
+  margin-left: 5px;
+  margin-bottom: 7px;
 }
 
+.field-group-auth:last-of-type {
+  margin-bottom: 13px;
+}
 
+.auth-form-field {
+  width: 300px;
+  padding: 7px 13px;
+}
 
+.popover-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-.log-in-item:focus-within .popover-auth,
-.log-in-item:focus-within .popover-entered {
+.popover-line:not(:last-of-type) {
+  margin-bottom: 39px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+  outline-offset: 4px;
+}
+
+.popover-control {
+  padding-left: 38px;
+  margin-left: 5px;
+  margin-right: 13px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: 2px solid var(--basic-grey);
+  border-radius: 2px;
+}
+
+.popover-control-mark {
+  width: 20px;
+  height: 20px;
+}
+
+.control-label {
+  width: 100%;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   display: block;
 }
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 8px;
+  background-image: url("../images/icons/check.svg");
+  background-repeat: no-repeat;
+}
+
+.control:hover .control-mark {
+  opacity: 0.6;
+}
+
+.control:active .control-mark {
+  opacity: 0.4;
+}
+
+.control:disabled {
+  opacity: 0.2;
+}
+
+.control:focus-within {
+  outline: 2px solid var(--basic-green);
+}
+
+.forgot-link {
+  color: var(--basic-black);
+  outline-offset: 4px;
+}
+
+.forgot-link:focus {
+  outline-color: var(--basic-green);
+}
+
+.button-login {
+  padding-left: 25px;
+  margin-right: 5px;
+}
+
+.button-login::before {
+  background-image: url("../images/icons/login.svg");
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+.button-login .button-text {
+  margin-right: 11px;
+}
+
+.registration-link {
+  max-width: 145px;
+  width: 100%;
+}
+
+.popover-entered {
+  right: 0;
+  max-width: 360px;
+  min-height: 273px;
+}
+
+.popover-entered .popover-content {
+  padding: 22px 53px 33px 31px;
+}
+
+.profile-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.profile-item {
+  margin-bottom: 23px;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--basic-grey);
+  text-decoration: none;
+  outline-offset: 2px;
+}
+
+.profile-link:hover {
+  opacity: 0.6;
+}
+
+.profile-link:active {
+  opacity: 0.2;
+}
+
+.profile-link:focus {
+  outline: 2px solid var(--basic-black);
+}
+
+.exit-link {
+  width: 145px;
+}
+
+
+.log-in-item:focus-within .popover-auth {
+  display: block;
+}
+/*
+.header-profile-link:focus-within .popover-entered {
+  display: block;
+} */
 
 .popover-open {
   display: block;

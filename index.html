@@ -58,7 +58,7 @@
           </form>
           <ul class="logging-in">
             <!-- Чтобы выбрать вариант формы входа (неавторизированная и авторизированная), добавьте нужной li класс "is-current"-->
-            <li class="log-in-item is-current">
+            <li class="log-in-item">
               <a class="header-link header-login-link" href="#">
                 <svg class="header-login-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -91,24 +91,29 @@
                       <input class="auth-form-field field" type="password" id="auth-password" name="auth-password"
                         placeholder="Пароль">
                     </p>
-                  </form>
-                  <div class="popover-line">
-                    <a class="auth-button button button-bright" href="#">
-                      <span class="auth-button-text">Войти</span>
-                    </a>
-                    <div class="auth-link-wrapper">
-                      <a class="auth-link auth-recovery caption" href="#">
-                        <span class="auth-link-text">Забыли пароль?</span>
-                      </a>
-                      <a class="auth-link caption" href="#">
-                        <span class="auth-link-text">Регистрация</span>
+                    <div class="popover-line">
+                      <label class="control popover-control">
+                        <input class="visually-hidden control-input" type="checkbox" name="remember-me" checked>
+                        <span class="control-mark popover-control-mark"></span>
+                        <span class="control-label caption">Запомнить меня</span>
+                      </label>
+                      <a class="header-link forgot-link" href="#">
+                        <span class="caption">Забыл пароль</span>
                       </a>
                     </div>
-                  </div>
+                    <div class="popover-line">
+                      <button class="button icon-button button-login" type="submit">
+                        <span class="button-text">войти</span>
+                      </button>
+                      <a class="button stroke-button registration-link" href="#">
+                        <span class="registration-link-text">регистрация</span>
+                      </a>
+                    </div>
+                  </form>
                 </div>
               </div>
             </li>
-            <li class="log-in-item">
+            <li class="log-in-item is-current">
               <a class="header-link header-profile-link" href="#">
                 <svg class="header-profile-icon" aria-hidden="true" focusable="false" width="16" height="17" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -118,6 +123,8 @@
                 </svg>
                 <span class="header-profile-name">Равшан Джамшутович</span>
               </a>
+
+
               <a class="header-link header-logout-link" href="#">
                 <svg class="header-logout-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -127,9 +134,37 @@
                 </svg>
                 <span class="visually-hidden">Выйти из профиля</span>
               </a>
+              <div class="popover popover-entered">
+                <div class="popover-content">
+                  <h2 class="popover-title headline-2">Здравствуйте, <span
+                      class="header-profile-name">Равшан&nbsp;Джамшутович</span></h2>
+                  <button class="popover-close-button" type="button">
+                    <svg class="popover-close-icon" aria-hidden="true" focusable="false" width="20" height="20"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm0-1.82a8.18 8.18 0 1 0 0-16.36 8.18 8.18 0 0 0 0 16.36Zm-3-3.9 3-3 3 3 1.28-1.29-3-2.99 3-3-1.29-1.28-2.99 3-3-3-1.28 1.29 3 2.99-3 3 1.29 1.28Z"
+                        fill="currentColor" />
+                    </svg>
+                    <span class="visually-hidden">Закрыть форму входа.</span>
+                  </button>
+                  <ul class="profile-list">
+                    <li class="profile-item">
+                      <a class="profile-link" href="#">
+                        <span class="profile-link-text">мои заказы</span>
+                      </a>
+                    </li>
+                    <li class="profile-item">
+                      <a class="profile-link" href="#">
+                        <span class="profile-link-text">личный кабинет</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a class="button stroke-button exit-link" href="#">
+                    <span class="button-text">выйти</span>
+                  </a>
+                </div>
+              </div>
             </li>
-
-
           </ul>
         </div>
       </div>
@@ -138,7 +173,9 @@
 
 
 
+
     <main class="main-index main-container">
+
     </main>
 
 
