@@ -59,8 +59,9 @@
   --special-yellowlight: #ffd180;
   --special-grey: #32425c;
   --special-greylight: #f8fafb;
-  --extra-greylight: #acacac;
   --special-greydark: #405069;
+  --extra-grey: #c4c4c4;
+  --extra-greylight: #acacac;
   --extra-greydark: #808080;
   --special-black: #293449;
   --status-error: #ff0000;
@@ -417,24 +418,29 @@ img {
   margin-left: auto;
   padding: 0;
   list-style-type: none;
+  display: flex;
 }
 
 .log-in-item {
+  position: relative;
   display: none;
-  outline-offset: 2px;
   margin: 10px 0;
+  height: 25px;
 }
 
 .log-in-item.is-current {
-  display: block;
+  display: flex;
 }
 
-.header-login-link {
+.header-link {
   display: flex;
   align-items: center;
   color: var(--extra-white);
   text-decoration: none;
-  font-style: normal;
+  outline-offset: 2px;
+}
+
+.header-login-link {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -446,18 +452,119 @@ img {
   margin-right: 12px;
 }
 
-.header-login-link:hover {
+.header-link:hover {
   opacity: 0.6;
 }
 
-.header-login-link:active {
+.header-link:active {
   opacity: 0.2;
 }
 
-.log-in-item:focus-within {
+.header-link:focus {
   outline: 2px solid var(--basic-white);
 }
 
-.header-login-link:focus {
-  outline: none;
+.header-profile-link {
+  margin-right: 18px;
+  max-width: 190px;
+}
+
+.header-profile-icon {
+  margin-right: 8px;
+}
+
+.header-logout-icon {
+  transform: rotate(180deg);
+}
+
+/* Popover-auth */
+.popover {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border-radius: 2px;
+  margin-top: 2px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popover-auth {
+  right: 0;
+  max-width: 360px;
+  min-height: 330px;
+}
+
+.popover-content {
+  position: relative;
+  height: 100%;
+  display: block;
+}
+
+.popover-auth .popover-content {
+  padding: 22px 29px 35px 26px;
+}
+
+.popover-title {
+  margin: 0;
+  margin-bottom: 26px;
+  max-width: 276px;
+}
+
+.popover-auth .popover-title {
+  margin-left: 5px;
+  margin-bottom: 43px;
+}
+
+.popover-close-button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.popover-close-icon {
+  color: var(--extra-grey);
+}
+
+.popover-close-button:hover .popover-close-icon {
+  color: var(--special-greydark);
+}
+
+.popover-close-button:active .popover-close-icon {
+  color: var(--basic-black);
+}
+
+.popover-close-button:focus {
+  outline: 2px solid var(--basic-green);
+}
+
+
+
+
+
+
+.popover-entered .popover-content {
+  padding: 22px 29px 33px 31px;
+}
+
+
+
+
+.log-in-item:focus-within .popover-auth,
+.log-in-item:focus-within .popover-entered {
+  display: block;
+}
+
+.popover-open {
+  display: block;
 }

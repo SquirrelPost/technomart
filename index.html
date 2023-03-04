@@ -57,27 +57,75 @@
               placeholder="Поиск:">
           </form>
           <ul class="logging-in">
-            <!-- Чтобы выбрать вариант формы входа, добавьте li класс "is-current"-->
+            <!-- Чтобы выбрать вариант формы входа (неавторизированная и авторизированная), добавьте нужной li класс "is-current"-->
             <li class="log-in-item is-current">
-              <a class="header-login-link" href="#">
+              <a class="header-link header-login-link" href="#">
                 <svg class="header-login-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M9 2h5v12H9v2h7V0H9v2ZM4.3 3.7l3.24 3.25H0v2h7.54l-3.25 3.24 1.42 1.42 4.95-4.95.7-.71-.7-.7L5.7 2.28 4.29 3.71Z"
                     fill="#fff" />
                 </svg>
-                <span class="header-login-text ">Войти</span>
+                <span class="header-login-text">Войти</span>
               </a>
+              <div class="popover popover-auth">
+                <div class="popover-content">
+                  <h2 class="popover-title headline-2">личный кабинет</h2>
+                  <button class="popover-close-button" type="button">
+                    <svg class="popover-close-icon" aria-hidden="true" focusable="false" width="20" height="20"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm0-1.82a8.18 8.18 0 1 0 0-16.36 8.18 8.18 0 0 0 0 16.36Zm-3-3.9 3-3 3 3 1.28-1.29-3-2.99 3-3-1.29-1.28-2.99 3-3-3-1.28 1.29 3 2.99-3 3 1.29 1.28Z"
+                        fill="currentColor" />
+                    </svg>
+                    <span class="visually-hidden">Закрыть форму входа.</span>
+                  </button>
+                  <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <p class="field-group-auth">
+                      <label class="visually-hidden" for="auth-login">Логин</label>
+                      <input class="auth-form-field field" type="text" id="auth-login" name="auth-login"
+                        placeholder="Логин">
+                    </p>
+                    <p class="field-group-auth">
+                      <label class="visually-hidden" for="auth-password">Пароль</label>
+                      <input class="auth-form-field field" type="password" id="auth-password" name="auth-password"
+                        placeholder="Пароль">
+                    </p>
+                  </form>
+                  <div class="popover-line">
+                    <a class="auth-button button button-bright" href="#">
+                      <span class="auth-button-text">Войти</span>
+                    </a>
+                    <div class="auth-link-wrapper">
+                      <a class="auth-link auth-recovery caption" href="#">
+                        <span class="auth-link-text">Забыли пароль?</span>
+                      </a>
+                      <a class="auth-link caption" href="#">
+                        <span class="auth-link-text">Регистрация</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="log-in-item">
-              <a class="header-logout-link" href="#">
-                <svg class="header-login-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+              <a class="header-link header-profile-link" href="#">
+                <svg class="header-profile-icon" aria-hidden="true" focusable="false" width="16" height="17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 16.61a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm5.38-4.27a6.55 6.55 0 1 0-10.76 0C3.44 11.26 5.36 10.8 8 10.8c2.64 0 4.56.46 5.38 1.54Zm-1.04 1.18c-.21-.77-1.74-1.27-4.34-1.27-2.6 0-4.13.5-4.34 1.27a6.52 6.52 0 0 0 8.68 0ZM8 4.25a2.8 2.8 0 0 0-2.9 2.91c0 2.5 1.27 3.64 2.9 3.64 1.61 0 2.9-1.1 2.9-3.5 0-1.65-1.14-3.05-2.9-3.05ZM6.55 7.16c0 1.65.6 2.18 1.45 2.18.86 0 1.45-.5 1.45-2.03 0-.91-.57-1.6-1.45-1.6-.92 0-1.45.59-1.45 1.45Z"
+                    fill="#fff" opacity=".8" />
+                </svg>
+                <span class="header-profile-name">Равшан Джамшутович</span>
+              </a>
+              <a class="header-link header-logout-link" href="#">
+                <svg class="header-logout-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M9 2h5v12H9v2h7V0H9v2ZM4.3 3.7l3.24 3.25H0v2h7.54l-3.25 3.24 1.42 1.42 4.95-4.95.7-.71-.7-.7L5.7 2.28 4.29 3.71Z"
                     fill="#fff" />
                 </svg>
-                <span class="header-login-text ">Войти</span>
+                <span class="visually-hidden">Выйти из профиля</span>
               </a>
             </li>
 
