@@ -1129,8 +1129,16 @@ img {
   padding-bottom: 40px;
 }
 
-.slider-drills {
-  background-image: url("../images/slider/drills.jpg");
+.slider-drill {
+  background-image: url("../images/slider/background-mask.png"), url("../images/slider/drill.jpg");
+}
+
+.slider-perforator {
+  background-image: url("../images/slider/background-mask.png"), url("../images/slider/perforator.jpg");
+}
+
+.slider-screwdriver {
+  background-image: url("../images/slider/background-mask.png"), url("../images/slider/screwdriver.jpg");
 }
 
 .slider-item-text-wrapper {
@@ -1154,6 +1162,10 @@ img {
   min-width: 195px;
   border-radius: 4px;
   padding: 13px 23px 14px;
+}
+
+.slider-catalog-button:focus {
+  outline-color: var(--basic-white);
 }
 
 .slider-controls {
@@ -1201,4 +1213,53 @@ img {
 
 .slider-button:focus {
   outline: 2px solid var(--basic-white);
+}
+
+.slider-pagination {
+  position: absolute;
+  bottom: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slider-pagination-item {
+  padding: 4px;
+  display: flex;
+}
+
+.slider-pagination-button {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--special-yellowlight);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-pagination-button:hover {
+  background-color: var(--special-yellow);
+}
+
+.slider-pagination-button:active {
+  opacity: 0.6;
+}
+
+.slider-pagination-button:focus {
+  outline: 2px solid var(--basic-white);
+}
+
+.slider-pagination-button-current,
+.slider-pagination-button-current:hover,
+.slider-pagination-button-current:active {
+  background-color: var(--basic-white);
+  cursor: default;
 }
