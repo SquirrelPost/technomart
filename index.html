@@ -58,7 +58,7 @@
           </form>
           <ul class="logging-in">
             <!-- Чтобы выбрать вариант формы входа (неавторизированная и авторизированная), добавьте нужной li класс "is-current"-->
-            <li class="log-in-item">
+            <li class="log-in-item is-current">
               <a class="header-link header-login-link" href="#">
                 <svg class="header-login-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -68,6 +68,7 @@
                 </svg>
                 <span class="header-login-text">Войти</span>
               </a>
+              <!-- Чтобы открыть поповер, добавьте класс popover-open -->
               <div class="popover popover-auth">
                 <div class="popover-content">
                   <h2 class="popover-title headline-2">личный кабинет</h2>
@@ -113,7 +114,7 @@
                 </div>
               </div>
             </li>
-            <li class="log-in-item is-current">
+            <li class="log-in-item">
               <a class="header-link header-profile-link" href="#">
                 <svg class="header-profile-icon" aria-hidden="true" focusable="false" width="16" height="17" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -123,17 +124,7 @@
                 </svg>
                 <span class="header-profile-name">Равшан Джамшутович</span>
               </a>
-
-
-              <a class="header-link header-logout-link" href="#">
-                <svg class="header-logout-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M9 2h5v12H9v2h7V0H9v2ZM4.3 3.7l3.24 3.25H0v2h7.54l-3.25 3.24 1.42 1.42 4.95-4.95.7-.71-.7-.7L5.7 2.28 4.29 3.71Z"
-                    fill="#fff" />
-                </svg>
-                <span class="visually-hidden">Выйти из профиля</span>
-              </a>
+              <!-- Чтобы открыть поповер, добавьте класс popover-open -->
               <div class="popover popover-entered">
                 <div class="popover-content">
                   <h2 class="popover-title headline-2">Здравствуйте, <span
@@ -164,6 +155,15 @@
                   </a>
                 </div>
               </div>
+              <a class="header-link header-logout-link" href="#">
+                <svg class="header-logout-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9 2h5v12H9v2h7V0H9v2ZM4.3 3.7l3.24 3.25H0v2h7.54l-3.25 3.24 1.42 1.42 4.95-4.95.7-.71-.7-.7L5.7 2.28 4.29 3.71Z"
+                    fill="#fff" />
+                </svg>
+                <span class="visually-hidden">Выйти из профиля</span>
+              </a>
             </li>
           </ul>
         </div>

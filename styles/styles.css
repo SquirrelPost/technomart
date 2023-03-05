@@ -830,15 +830,6 @@ img {
   width: 145px;
 }
 
-
-.log-in-item:focus-within .popover-auth {
-  display: block;
-}
-/*
-.header-profile-link:focus-within .popover-entered {
-  display: block;
-} */
-
 .popover-open {
   display: block;
 }
