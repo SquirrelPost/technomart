@@ -253,6 +253,7 @@
       <section class="promo-block">
         <div class="container">
           <h2 class="visually-hidden">Промо-блок</h2>
+          <!-- Для установления метки "NEW" на товар, добавить у li класс "new-product" -->
           <ul class="promo-block-list">
             <li class="promo-block-item materials new-product">
               <h3 class="promo-block-title headline-2">Материалы</h3>
@@ -356,6 +357,153 @@
           </ul>
         </div>
       </section>
+      <section class="catalog-products">
+        <div class="container">
+          <h2 class="catalog-products-title headline-1">ПЕРФОРАТОРЫ</h2>
+          <div class="catalog-products-wrapper">
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset class="catalog-filter-group price-field">
+                <legend class="filter-group-title paragraph-bold">ЦЕНА</legend>
+                <div class="range-wrapper-scale">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 71px">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="range-wrapper-inputs">
+                  <label class="catalog-filter-label" for="min-price">
+                    <span class="visually-hidden">Минимальная цена</span>
+                  </label>
+                  <input class="range-input caption" type="number" value="0" id="min-price" name="min-price">
+                  <label class="catalog-filter-label" for="max-price">
+                    <span class="visually-hidden">Максимальная цена</span>
+                  </label>
+                  <input class="range-input caption" type="number" value="30000" id="max-price" name="max-price">
+                </div>
+              </fieldset>
+              <fieldset class="catalog-filter-group">
+                <legend class="filter-group-title filter-firm paragraph-bold">ПРОИЗВОДИТЕЛИ</legend>
+                <ul class="catalog-filter-list caption">
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="firm-bosch" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">BOSCH</span>
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="firm-interskol">
+                      <span class="control-mark"></span>
+                      <span class="control-label">ИНТЕРСКОЛ</span>
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="firm-makita" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">MAKIta</span>
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="firm-dewalt">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Dewalt</span>
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="firm-hitachi">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Hitachi</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="catalog-filter-group">
+                <legend class="filter-group-title filter-power paragraph-bold">ПИТАНИЕ</legend>
+                <ul class="catalog-filter-list caption">
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="radio" name="battery-power" value="accumulator"
+                        checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Аккумуляторные</span>
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="radio" name="battery-power"
+                        value="mains-powered">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Сетевые</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="button stroke-button button-filter" type="submit">
+                <span class="button-text">Показать</span>
+              </button>
+            </form>
+            <div class="catalog-right-column">
+              <div class="select sorting-type">
+                <select class="select-control" name="Сортировать" aria-label="Сортировка">
+                  <optgroup label="Сортировать">
+                    <option value="popular">Популярные</option>
+                    <option value="cheap">Дешёвые</option>
+                    <option value="expensive">Дорогие</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="product-block">
+                <h3 class="visually-hidden">Список товаров каталога.</h3>
+                <ul class="product-list">
+                  <!-- Для установления метки "NEW" на товар, добавить у li класс "new-product" -->
+                  <li class="product-card">
+
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="pagination-container">
+
+                <ul class="pagination">
+
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <span class="pagination-link pagination-current" title="Вы сейчас здесь">2</span>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">4</a>
+                  </li>
+                </ul>
+
+                <button class="button" type="button">
+                  <span class="button-text">показать еще</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+
     </main>
 
 
