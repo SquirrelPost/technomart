@@ -454,29 +454,215 @@
             </form>
             <div class="catalog-right-column">
               <div class="select sorting-type">
-                <select class="select-control" name="Сортировать" aria-label="Сортировка">
-                  <optgroup label="Сортировать">
-                    <option value="popular">Популярные</option>
-                    <option value="cheap">Дешёвые</option>
-                    <option value="expensive">Дорогие</option>
-                  </optgroup>
+                <select class="select-control field paragraph" aria-label="Сортировка">
+                  <option value="" disabled selected hidden>Сортировать</option>
+                  <option value="popular">по популярности</option>
+                  <option value="cheap">по увеличению цены</option>
+                  <option value="expensive">по уменьшению цены</option>
                 </select>
+                <svg class="select-control-icon" aria-hidden="true" focusable="false" width="10" height="7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="m8 0 1.41 1.41-4.7 4.71L0 1.42 1.41 0l3.3 3.3L8 0Z"
+                    fill="currentColor" />
+                </svg>
               </div>
               <div class="product-block">
                 <h3 class="visually-hidden">Список товаров каталога.</h3>
                 <ul class="product-list">
                   <!-- Для установления метки "NEW" на товар, добавить у li класс "new-product" -->
-                  <li class="product-card">
-
+                  <li class="product-card new-product">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text">22500 ₽</span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
                   </li>
-
+                  <li class="product-card">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text">22500 ₽</span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="product-card new-product">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text"></span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="product-card new-product">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text"></span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="product-card new-product">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text"></span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="product-card new-product">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text">22500 ₽</span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="product-card new-product">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text">22500 ₽</span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="product-card">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text">22500 ₽</span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="product-card new-product">
+                    <a class="product-card-link" href="#">
+                      <img class="product-card-image" src="images/catalog/perforator-1.jpg" width="216" height="180"
+                        alt="Современный стильный перфоратор с крепкой черной ручкой для опоры и темно-синей рабочей частью с фирменным логотипом BOSCH.">
+                      <div class="product-card-content">
+                        <h4 class="product-card-title headline-3">Перфоратор BOSCH<br>BFG 3000</h4>
+                        <span class="product-card-old-price button-text"></span>
+                        <button class="product-card-price button sticker-button">
+                          <span class="button-text">15500 ₽</span>
+                        </button>
+                      </div>
+                    </a>
+                    <div class="product-card-over-container">
+                      <button class="product-card-buy button icon-button">
+                        <span class="button-text">КУПИТЬ</span>
+                      </button>
+                      <button class="product-card-mark button stroke-button">
+                        <span class="button-text">В закладки</span>
+                      </button>
+                    </div>
+                  </li>
                 </ul>
               </div>
-
               <div class="pagination-container">
-
                 <ul class="pagination">
-
                   <li class="pagination-item">
                     <a class="pagination-link" href="#">1</a>
                   </li>
@@ -490,8 +676,7 @@
                     <a class="pagination-link" href="#">4</a>
                   </li>
                 </ul>
-
-                <button class="button" type="button">
+                <button class="button pagination-button-more" type="button">
                   <span class="button-text">показать еще</span>
                 </button>
               </div>
