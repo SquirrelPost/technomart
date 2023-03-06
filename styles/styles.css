@@ -1717,3 +1717,65 @@ img {
   max-width: 195px;
   padding: 14px 6px 13px;
 }
+
+/* Services */
+.service-block {
+  background-color: var(--extra-background);
+  padding: 0 20px;
+}
+
+.service-block .container {
+  margin-bottom: 52px;
+  padding: 52px 0 53px;
+}
+
+.service-title {
+  margin: 0 auto 30px;
+  max-width: 500px;
+  text-align: center;
+  color: var(--special-black);
+}
+
+.service-content {
+  margin: 0 auto 64px;
+  max-width: 556px;
+  color: var(--special-black);
+  text-align: center;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  gap: 20px 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.service-item {
+  padding: 24px 39px 50px 31px;
+  background-color: var(--basic-white);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+.service-item-icon {
+  margin-bottom: 41px;
+  color: var(--basic-red-hover);
+}
+
+.service-item-title {
+  color: var(--special-grey);
+  margin: 0;
+  margin-bottom: 21px;
+  max-width: 300px;
+}
+
+.service-item-content {
+  margin: 0;
+  max-width: 300px;
+}
+
+.content-warranty {
+  margin-left: 4px;
+}
