@@ -1753,27 +1753,52 @@ img {
 }
 
 .service-item {
-  padding: 24px 39px 50px 31px;
+  min-height: 382px;
   background-color: var(--basic-white);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
 }
 
+.service-item-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-decoration: none;
+  padding: 24px 39px 50px 31px;
+}
+
+.service-item-link:hover {
+  box-shadow: 0 8px 20px var(--basic-white);
+}
+
+.service-item-link:active {
+  opacity: 0.6;
+  color: var(--basic-black);
+}
+
+.service-item-link:focus {
+  outline: 2px solid var(--basic-black);
+}
+
 .service-item-icon {
-  margin-bottom: 41px;
+  margin-bottom: 47px;
   color: var(--basic-red-hover);
 }
 
 .service-item-title {
   color: var(--special-grey);
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
   max-width: 300px;
 }
 
 .service-item-content {
   margin: 0;
+  margin-bottom: auto;
   max-width: 300px;
+  color: var(--basic-black);
 }
 
 .content-warranty {
