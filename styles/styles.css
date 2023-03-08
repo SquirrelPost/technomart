@@ -1916,6 +1916,7 @@ img {
 
 .contacts-map {
   display: flex;
+  background-color: var(--basic-neutral);
 }
 
 .contacts-map:hover {
