@@ -264,7 +264,7 @@ img {
 }
 
 .sticker-button {
-  padding: 11px 29px 11px 29px;
+  padding: 11px 29px;
   position: relative;
   border-radius: 4px;
 }
@@ -964,7 +964,7 @@ img {
   display: none;
 }
 
-/* Раскоментировать, если в закладках не пусто*/
+/* Раскоментировать, если в закладках не пусто */
 /* .bookmark-empty {
   display: none;
 }
@@ -978,7 +978,7 @@ img {
   display: none;
 }
 
-/* Раскоментировать, если в корзине не пусто*/
+/* Раскоментировать, если в корзине не пусто */
 /* .basket-empty {
   display: none;
 }
@@ -1331,10 +1331,6 @@ img {
   margin-left: 5px;
 }
 
-.filter-power + .catalog-filter-list {
-  margin-left: 5px;
-}
-
 .range-wrapper-scale {
   width: 100%;
   padding: 19px 20px 19px 29px;
@@ -1421,11 +1417,15 @@ img {
   border-radius: 2px;
   text-align: center;
   padding: 11px;
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   margin: 0;
 }
 
@@ -1466,6 +1466,10 @@ img {
   padding: 0;
   list-style-type: none;
   width: 100%;
+}
+
+.filter-power + .catalog-filter-list {
+  margin-left: 5px;
 }
 
 .catalog-filter-item {
@@ -1515,7 +1519,7 @@ img {
   display: flex;
   align-items: center;
   max-width: 280px;
-  margin: 32px 5px 31px 5px;
+  margin: 32px 5px 31px;
 }
 
 .select-control {
@@ -1640,7 +1644,6 @@ img {
   margin-top: auto;
   padding: 11px 27px 11px 26px;
   white-space: nowrap;
-
 }
 
 .product-card-over-container {
@@ -1684,9 +1687,8 @@ img {
   width: calc(100% - 1px);
   height: 100%;
   box-shadow: 0 4px 13px rgba(0, 0, 0, 0.25);
-  /* filter: drop-shadow(0 4px 13px rgba(0, 0, 0, 0.25)); */
-  z-index: 12;
   display: none;
+  z-index: -1;
 }
 
 .product-card:hover::before {
@@ -1743,17 +1745,17 @@ img {
   outline-offset: 1px;
 }
 
-.pagination-link:hover:not(span) {
-  background-color: var(--special-grey);
-  color: var(--basic-greylight);
-}
-
 .pagination-link:active {
   opacity: 0.6;
 }
 
 .pagination-link:focus {
   outline: 2px solid var(--basic-black);
+}
+
+.pagination-link:hover:not(span) {
+  background-color: var(--special-grey);
+  color: var(--basic-greylight);
 }
 
 .pagination-current,
@@ -1854,6 +1856,7 @@ img {
   margin: 0;
   margin-bottom: auto;
   max-width: 300px;
+  width: 100%;
   color: var(--basic-black);
 }
 
@@ -1861,7 +1864,7 @@ img {
   margin-left: 4px;
 }
 
-/* About us + contacts */
+/* About us & contacts */
 .two-section-block {
   padding: 0 20px;
   color: var(--special-black);
@@ -1970,6 +1973,10 @@ img {
 
 .footer-contacts-text {
   margin: 0;
+}
+
+.footer-contacts-text-street {
+  letter-spacing: -0.01em;
 }
 
 .footer-contacts-phone {
